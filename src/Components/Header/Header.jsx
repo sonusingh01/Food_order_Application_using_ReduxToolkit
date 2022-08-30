@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from "react";
 
 import { Container } from "reactstrap";
 import logo from "../../assets/res-logo.png";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link, Navigate, useNavigate } from "react-router-dom";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import { styled } from "@mui/material/styles";
 import Badge from "@mui/material/Badge";
@@ -10,6 +10,9 @@ import Badge from "@mui/material/Badge";
 import "../../style/header.css";
 import { IconButton } from "@mui/material";
 import { ShoppingCart } from "@mui/icons-material";
+import { FaSignInAlt } from "react-icons/fa";
+import { logout, reset } from "../../Redux/AuthSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 const nav__links = [
   {
@@ -64,6 +67,16 @@ const Header = () => {
     });
   }, []);
 
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const { user } = useSelector((state) => state.auth);
+  const onLogout = () => {
+    dispatch(logout());
+    dispatch(reset());
+    navigate("/home")
+    console.log("hii")
+  };
+
   return (
     <header className="header" ref={headerRef}>
       <Container>
@@ -99,18 +112,40 @@ const Header = () => {
             </IconButton>
 
             <span className="user">
-              <Link to="/login" style={{color:"blue", textDecoration:"none "}}>
-                <AccountCircleIcon />SIGN IN
-              </Link>
-            </span>
-            <span className="user">
-              <Link to="/register" style={{color:"blue", textDecoration:"none ", }}>
-                <AccountCircleIcon />SIGN UP
+              <Link
+                to="/register"
+                style={{ color: "black", textDecoration: "none " , fontWeight:"500" , fontFamily:"fantasy"}}
+              >
+                <AccountCircleIcon />
+                SIGN UP
               </Link>
             </span>
 
+            {!user ?   (
+              <span className="user">
+                <Link
+                  to="/login"
+                  style={{ color: "black  ", textDecoration: "none " , fontWeight:"500" , fontFamily:"fantasy"}}
+                >
+                  <AccountCircleIcon />
+                  SIGN IN
+                </Link>
+              </span>
+            ) : (
+              <span className="user">
+                <Link
+                  to="/register"
+                  style={{ color: "black", textDecoration: "none " }}
+                  onClick={onLogout}
+                >
+                  <FaSignInAlt />
+                  LogOut
+                </Link>
+              </span>
+            )}
+
             <span className="mobile__menu" onClick={toggleMenu}>
-              <i class="ri-menu-line"></i>
+              <i className="ri-menu-line"></i>
             </span>
           </div>
         </div>

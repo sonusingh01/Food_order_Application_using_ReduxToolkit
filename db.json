@@ -1,0 +1,101 @@
+{
+    "products":[
+        {
+            "id":1,
+            "title":"Burger",
+            "price":299,
+            "image":"./src/assets/burger.jpg"
+        },
+
+        {
+            "id":2,
+            "title":"pizza",
+            "price":499,
+            "image":"./src/assets/pizza.jpg"
+            
+        },
+        {
+            "id":3,
+            "title":"burger",
+            "price":599,
+            "image":"./src/assets//burger2.jpg"
+            
+        },
+        {
+            "id":4,
+            "title":"burger",
+            "price":399,
+            "image":"./src/assets/burger3.jpg"
+            
+        },
+        {
+            "id":5,
+            "title":"pizza",
+            "price":699,
+            "image":"./src/assets/pizza2.jpg"
+            
+        },
+        {
+            "id":6,
+            "title":"burger",
+            "price":999,
+            "image":"./src/assets/burger.jpg"
+            
+        },
+        {
+            "id":7,
+            "title":"pizza",
+            "price":199,
+            "image":"./src/assets/5.jpg"
+            
+        },
+        {
+            "id":8,
+            "title":"pizza",
+            "price":1499,
+            "image":"./src/assets/4.jpg"
+            
+        },{
+            "id":9,
+            "title":"burger",
+            "price":999,
+            "image":"./src/assets/burger.jpg"
+            
+        },
+        {
+            "id":10,
+            "title":"pizza",
+            "price":199,
+            "image":"./src/assets/5.jpg"
+            
+        },
+        {
+            "id":11,
+            "title":"pizza",
+            "price":1499,
+            "image":"./src/assets/4.jpg"
+            
+        },
+        {
+            "id":12,
+            "title":"burger",
+            "price":999,
+            "image":"./src/assets/burger.jpg"
+            
+        },
+        {
+            "id":13,
+            "title":"pizza",
+            "price":199,
+            "image":"./src/assets/5.jpg"
+            
+        },
+        {
+            "id":14,
+            "title":"pizza",
+            "price":1499,
+            "image":"./src/assets/4.jpg"
+            
+        }
+    ]
+}

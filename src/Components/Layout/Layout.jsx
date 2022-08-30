@@ -6,10 +6,11 @@ function Layout() {
   return (
     <div>
       <div>
-    
         <Header />
       </div>
-      <div><Router/></div>
+      <div>
+        <Router />
+      </div>
     </div>
   );
 }

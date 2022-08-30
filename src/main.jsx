@@ -5,6 +5,10 @@ import App from './App'
 
 import {store} from "./Redux/store"
 import {BrowserRouter} from "react-router-dom"
+
+
+
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>'
    <BrowserRouter>
